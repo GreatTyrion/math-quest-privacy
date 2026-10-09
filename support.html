@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Math Quest</title>
+<meta name="description" content="Help with Math Quest, the iPad maths games for primary-school children.">
+<meta name="color-scheme" content="light dark">
+<!-- Self-contained like index.html: nothing is loaded from anywhere. -->
+<style>
+  :root {
+    --accent: #8b5cf6;
+    --bg: #fff8ee;
+    --surface: #ffffff;
+    --text: #43325b;
+    --muted: #7a6b93;
+    --rule: #eadfcc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17131f;
+      --surface: #221c2e;
+      --text: #f3eefb;
+      --muted: #a99cc0;
+      --rule: #342c44;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  main { max-width: 41rem; margin: 0 auto; }
+
+  header {
+    padding: 4rem 0 2rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 2.5rem;
+  }
+
+  /* The four game tiles of the app icon, as plain squares. */
+  .mark { display: block; width: 2.75rem; height: 2.75rem; margin-bottom: 1.25rem; }
+
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .5rem; letter-spacing: -0.01em; }
+  .app-name { color: var(--muted); font-size: 1rem; margin: 0 0 1.5rem; }
+  .updated { color: var(--muted); font-size: .9rem; margin: 0; }
+
+  h2 {
+    font-size: 1.15rem;
+    margin: 2.75rem 0 .75rem;
+    padding-top: .25rem;
+    letter-spacing: -0.005em;
+  }
+
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+  li { margin-bottom: .4rem; }
+
+  .lede {
+    font-size: 1.3rem;
+    line-height: 1.45;
+    padding: 1.25rem 1.5rem;
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 2rem;
+  }
+
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Language switch. Without JavaScript both languages simply stay visible,
+     which is a worse layout but never a broken page. */
+  .langs { display: flex; gap: .5rem; margin-top: 1.5rem; }
+  .langs button {
+    font: inherit;
+    font-size: .9rem;
+    padding: .35rem .9rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .langs button[aria-pressed="true"] {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .langs:not(.ready) { display: none; }
+
+  section[hidden] { display: none; }
+  ol { margin: 0 0 1rem; padding-left: 1.4rem; }
+  .contact { font-size: 1.05rem; }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+
+  @media (max-width: 30rem) {
+    header { padding-top: 2.5rem; }
+    h1 { font-size: 1.6rem; }
+    .lede { font-size: 1.15rem; padding: 1rem 1.15rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <svg class="mark" viewBox="0 0 44 44" aria-hidden="true">
+      <rect x="2" y="2" width="18" height="18" rx="5" fill="#f59e0b"></rect>
+      <rect x="24" y="2" width="18" height="18" rx="5" fill="#0ea5e9"></rect>
+      <rect x="2" y="24" width="18" height="18" rx="5" fill="#f43f5e"></rect>
+      <rect x="24" y="24" width="18" height="18" rx="5" fill="#10b981"></rect>
+    </svg>
+    <p class="app-name" id="app-name">Math Quest</p>
+    <h1 id="page-title">Support</h1>
+    <div class="langs" id="langs">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="zh" aria-pressed="false">简体中文</button>
+    </div>
+  </header>
+
+  <section id="lang-en" lang="en">
+    <p class="contact">Questions, problems, or ideas:
+      <a href="mailto:sjuniorkickers@gmail.com">sjuniorkickers@gmail.com</a></p>
+
+    <h2>Getting started</h2>
+    <ol>
+      <li>On first launch, type a name for each child, pick their grade and a
+      picture. Setup starts with two players; tap <strong>Remove</strong> on one
+      you don't need, or <strong>Add another player</strong> for up to four.</li>
+      <li>Choose a 4-digit parent PIN and tap <strong>Start playing!</strong></li>
+      <li>Each child taps their own picture to play.</li>
+    </ol>
+
+    <h2>Which games match my child's class?</h2>
+    <p>Each grade follows the PEP (人教版) primary maths textbook for that term,
+    one game per unit. A child sees their own grade first and can peek at the
+    other grades from their home screen. A parent can change a child's grade in
+    the parent zone.</p>
+
+    <h2>How do I change the language?</h2>
+    <p>Language is chosen inside the app, not by the iPad's settings. In the
+    parent zone, each child has an English / 中文 switch, and the switch at the
+    top changes the language of the parent zone and the player picker.</p>
+
+    <h2>How do points and prizes work?</h2>
+    <p>Children earn points for right answers and spend them in the prize shop.
+    The prizes are whatever you set up in the parent zone. When a child asks for
+    one, it waits for you: approve it, or return the points.</p>
+
+    <h2>I forgot the parent PIN</h2>
+    <p>On the PIN screen, tap <strong>Forgot the PIN?</strong>, hold the button
+    for three seconds, and answer a multiplication question meant for a
+    grown-up. Then choose a new PIN. Every child's progress, points and prizes
+    are kept.</p>
+
+    <h2>Can I add or remove a child later?</h2>
+    <p>Yes, in the parent zone. <strong>+ Add a player</strong> sits below the
+    children, up to eight in all. Each child's card has a <strong>Remove</strong>
+    button, which asks first, because removing a child deletes their stars,
+    points, badges and prizes. The last remaining child can't be removed.</p>
+
+    <h2>Does it sync between devices?</h2>
+    <p>No. Everything is stored on the iPad it was entered on. The app has no
+    account and no server. If your iPad backs up to iCloud or a computer, the
+    app's data is included in that backup like any other app's.</p>
+
+    <h2>I found a problem</h2>
+    <p>Please email the address above and describe what happened. Knowing the
+    grade, the game and the level, plus your iPad model and iPadOS version,
+    helps.</p>
+  </section>
+
+  <section id="lang-zh" lang="zh-Hans">
+    <p class="contact">问题、故障或建议：
+      <a href="mailto:sjuniorkickers@gmail.com">sjuniorkickers@gmail.com</a></p>
+
+    <h2>开始使用</h2>
+    <ol>
+      <li>第一次打开时，为每个孩子填写名字，选择年级和头像。设置页一开始有两位玩家；
+      不需要的可以点<strong>删掉</strong>，也可以点<strong>+ 再加一个人</strong>，最多四位。</li>
+      <li>设定一个 4 位数字的家长密码，然后点<strong>开始玩吧！</strong></li>
+      <li>每个孩子点自己的头像开始玩。</li>
+    </ol>
+
+    <h2>哪些游戏和孩子的课程对应？</h2>
+    <p>每个年级都按照该学期的人教版小学数学教材编排，一个单元对应一个游戏。孩子会先看到
+    自己年级的游戏，也可以在主页上看看其他年级。家长可以在家长区更改孩子的年级。</p>
+
+    <h2>怎么切换语言？</h2>
+    <p>语言在应用里选择，与 iPad 的系统设置无关。在家长区里，每个孩子都有一个
+    English / 中文 开关；顶部的开关则用来切换家长区和选择玩家页面的语言。</p>
+
+    <h2>积分和奖品是怎么回事？</h2>
+    <p>孩子答对题目获得积分，可以在奖品店里兑换。奖品由你在家长区设定。孩子申请兑换后，
+    奖品会等你处理：你可以同意，也可以把积分退回。</p>
+
+    <h2>忘记了家长密码</h2>
+    <p>在输入密码的页面点<strong>忘记密码？</strong>，按住按钮 3 秒，再回答一道给家长的
+    乘法题，然后设定新密码即可。所有孩子的进度、积分和奖品都会保留。</p>
+
+    <h2>以后还能添加或删除孩子吗？</h2>
+    <p>可以，在家长区里操作。孩子列表下方有<strong>+ 添加玩家</strong>，最多八位。每个孩子
+    的卡片上都有<strong>删除</strong>按钮，会先请你确认，因为删除孩子会一并删除其星星、积分、
+    徽章和奖品。最后一位孩子不能删除。</p>
+
+    <h2>会在多台设备之间同步吗？</h2>
+    <p>不会。所有内容都保存在输入它的那台 iPad 上。应用没有账号，也没有服务器。
+    如果你的 iPad 备份到 iCloud 或电脑，应用的数据会像其他应用一样包含在备份中。</p>
+
+    <h2>我遇到了问题</h2>
+    <p>请发邮件到上面的地址，描述一下发生了什么。附上年级、游戏和关卡，以及 iPad 型号
+    和 iPadOS 版本，会更有帮助。</p>
+  </section>
+
+  <footer>
+    <p><a href="./" id="footer-privacy">Privacy Policy</a></p>
+  </footer>
+
+</main>
+
+<script>
+  (function () {
+    var app = { en: "Math Quest", zh: "数学大冒险" };
+    var titles = { en: "Support", zh: "支持" };
+    var privacyLabel = { en: "Privacy Policy", zh: "隐私政策" };
+    var buttons = document.querySelectorAll("#langs button");
+    var sections = { en: document.getElementById("lang-en"), zh: document.getElementById("lang-zh") };
+
+    function show(lang) {
+      Object.keys(sections).forEach(function (k) { sections[k].hidden = k !== lang; });
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+      document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
+      document.getElementById("app-name").textContent = app[lang];
+      document.getElementById("page-title").textContent = titles[lang];
+      document.getElementById("footer-privacy").textContent = privacyLabel[lang];
+      document.title = titles[lang] + " — " + app[lang];
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () { show(b.dataset.lang); });
+    });
+
+    document.getElementById("langs").classList.add("ready");
+    show((navigator.language || "en").toLowerCase().indexOf("zh") === 0 ? "zh" : "en");
+  })();
+</script>
+</body>
+</html>

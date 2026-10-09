@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Math Quest</title>
+<meta name="description" content="Math Quest collects no data. No account, no server, no analytics, no tracking.">
+<meta name="color-scheme" content="light dark">
+<!--
+  This page loads nothing from anywhere: no web fonts, no scripts from a CDN,
+  no analytics, no images. A privacy policy that quietly called out to a third
+  party while claiming to collect nothing would be contradicting itself.
+-->
+<style>
+  :root {
+    --accent: #8b5cf6;
+    --bg: #fff8ee;
+    --surface: #ffffff;
+    --text: #43325b;
+    --muted: #7a6b93;
+    --rule: #eadfcc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17131f;
+      --surface: #221c2e;
+      --text: #f3eefb;
+      --muted: #a99cc0;
+      --rule: #342c44;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0 1.25rem 5rem;
+    background: var(--bg);
+    color: var(--text);
+    font: 400 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Roboto, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  main { max-width: 41rem; margin: 0 auto; }
+
+  header {
+    padding: 4rem 0 2rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 2.5rem;
+  }
+
+  /* The four game tiles of the app icon, as plain squares. */
+  .mark { display: block; width: 2.75rem; height: 2.75rem; margin-bottom: 1.25rem; }
+
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .5rem; letter-spacing: -0.01em; }
+  .app-name { color: var(--muted); font-size: 1rem; margin: 0 0 1.5rem; }
+  .updated { color: var(--muted); font-size: .9rem; margin: 0; }
+
+  h2 {
+    font-size: 1.15rem;
+    margin: 2.75rem 0 .75rem;
+    padding-top: .25rem;
+    letter-spacing: -0.005em;
+  }
+
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+  li { margin-bottom: .4rem; }
+
+  .lede {
+    font-size: 1.3rem;
+    line-height: 1.45;
+    padding: 1.25rem 1.5rem;
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 2rem;
+  }
+
+  a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Language switch. Without JavaScript both languages simply stay visible,
+     which is a worse layout but never a broken page. */
+  .langs { display: flex; gap: .5rem; margin-top: 1.5rem; }
+  .langs button {
+    font: inherit;
+    font-size: .9rem;
+    padding: .35rem .9rem;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .langs button[aria-pressed="true"] {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .langs:not(.ready) { display: none; }
+
+  section[hidden] { display: none; }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+
+  @media (max-width: 30rem) {
+    header { padding-top: 2.5rem; }
+    h1 { font-size: 1.6rem; }
+    .lede { font-size: 1.15rem; padding: 1rem 1.15rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <svg class="mark" viewBox="0 0 44 44" aria-hidden="true">
+      <rect x="2" y="2" width="18" height="18" rx="5" fill="#f59e0b"></rect>
+      <rect x="24" y="2" width="18" height="18" rx="5" fill="#0ea5e9"></rect>
+      <rect x="2" y="24" width="18" height="18" rx="5" fill="#f43f5e"></rect>
+      <rect x="24" y="24" width="18" height="18" rx="5" fill="#10b981"></rect>
+    </svg>
+    <p class="app-name" id="app-name">Math Quest</p>
+    <h1 id="page-title">Privacy Policy</h1>
+    <p class="updated" id="page-updated">Last updated: 9 October 2026</p>
+
+    <div class="langs" id="langs">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="zh" aria-pressed="false">简体中文</button>
+    </div>
+  </header>
+
+  <section id="lang-en" lang="en">
+    <p class="lede">Math Quest does not collect any data about you or your children.</p>
+
+    <p>The app has no account system, no server, and makes no network requests.
+    It contains no analytics, no advertising, no tracking, and no in-app
+    purchases.</p>
+
+    <h2>What the app stores</h2>
+    <p>To work, the app keeps a small database inside its own storage on your
+    iPad:</p>
+    <ul>
+      <li>each player's name, picture, grade and language, as entered during
+      setup or in the parent zone;</li>
+      <li>their progress: stars, scores, points and badges;</li>
+      <li>the prizes you set up, and which ones were asked for;</li>
+      <li>the parent PIN, stored only as a one-way hash, never as the digits
+      themselves.</li>
+    </ul>
+    <p>That database never leaves your iPad. Nobody, including the developer,
+    can see it.</p>
+
+    <h2>What happens to your data</h2>
+    <ul>
+      <li>It is not transmitted anywhere.</li>
+      <li>It is not shared with anyone.</li>
+      <li>It is not used for advertising or analytics.</li>
+    </ul>
+    <p>If your iPad is set to back up to iCloud or to a computer, the app's
+    database is included in that backup, the same as any other app's data.
+    That backup is controlled entirely by Apple's settings on your device, not
+    by this app.</p>
+
+    <h2>Deleting your data</h2>
+    <p>Deleting the app from your iPad removes everything it stored. There is
+    nothing else to delete and no account to close.</p>
+
+    <h2>Children</h2>
+    <p>Math Quest is made for primary-school children and collects nothing from
+    anyone, including children. Player names stay on the iPad they were typed
+    into.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy ever changes, the updated version will be posted at this
+    address with a new date at the top.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy:
+      <a href="mailto:sjuniorkickers@gmail.com">sjuniorkickers@gmail.com</a></p>
+  </section>
+
+  <section id="lang-zh" lang="zh-Hans">
+    <p class="lede">数学大冒险不收集任何关于你或你孩子的数据。</p>
+
+    <p>本应用没有账号系统，没有服务器，也不发起任何网络请求。应用中没有数据统计、
+    没有广告、没有追踪，也没有应用内购买。</p>
+
+    <h2>应用保存了什么</h2>
+    <p>为了正常使用，应用会在 iPad 上属于本应用的存储空间里保存一个小型数据库：</p>
+    <ul>
+      <li>每位玩家的名字、头像、年级和语言，由你在设置时或家长区中填写；</li>
+      <li>他们的进度：星星、成绩、积分和徽章；</li>
+      <li>你设定的奖品，以及孩子申请过哪些奖品；</li>
+      <li>家长密码，只以单向哈希的形式保存，从不保存数字本身。</li>
+    </ul>
+    <p>该数据库不会离开你的 iPad。任何人都无法查看，包括开发者本人。</p>
+
+    <h2>你的数据会被如何处理</h2>
+    <ul>
+      <li>不会被传输到任何地方。</li>
+      <li>不会与任何人共享。</li>
+      <li>不会用于广告或数据分析。</li>
+    </ul>
+    <p>如果你的 iPad 设置了 iCloud 备份或电脑备份，本应用的数据库会像其他应用的数据
+    一样包含在备份中。该备份完全由你设备上的 Apple 设置控制，与本应用无关。</p>
+
+    <h2>删除你的数据</h2>
+    <p>从 iPad 上删除本应用，即可清除它保存的全部内容。没有其他需要删除的内容，
+    也没有需要注销的账号。</p>
+
+    <h2>儿童</h2>
+    <p>数学大冒险是为小学生设计的，不向任何人收集数据，儿童也不例外。玩家的名字只
+    保存在输入它的那台 iPad 上。</p>
+
+    <h2>政策变更</h2>
+    <p>如果本政策有任何变更，更新后的版本会发布在此地址，并在顶部标注新的日期。</p>
+
+    <h2>联系方式</h2>
+    <p>有关本政策的问题请联系：
+      <a href="mailto:sjuniorkickers@gmail.com">sjuniorkickers@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p id="footer-note">Math Quest is an iPad app of maths games for primary-school
+    children.</p>
+    <p><a href="./support.html" id="footer-support">Support</a></p>
+  </footer>
+
+</main>
+
+<script>
+  (function () {
+    var strings = {
+      en: { app: "Math Quest", title: "Privacy Policy", updated: "Last updated: 9 October 2026",
+            note: "Math Quest is an iPad app of maths games for primary-school children.",
+            support: "Support" },
+      zh: { app: "数学大冒险", title: "隐私政策", updated: "最后更新：2026 年 10 月 9 日",
+            note: "数学大冒险是一款面向小学生的 iPad 数学游戏应用。",
+            support: "支持" }
+    };
+    var buttons = document.querySelectorAll("#langs button");
+    var sections = { en: document.getElementById("lang-en"), zh: document.getElementById("lang-zh") };
+
+    function show(lang) {
+      Object.keys(sections).forEach(function (key) { sections[key].hidden = key !== lang; });
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+      document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
+      document.getElementById("app-name").textContent = strings[lang].app;
+      document.getElementById("page-title").textContent = strings[lang].title;
+      document.getElementById("page-updated").textContent = strings[lang].updated;
+      document.getElementById("footer-note").textContent = strings[lang].note;
+      document.getElementById("footer-support").textContent = strings[lang].support;
+      document.title = strings[lang].title + " — " + strings[lang].app;
+    }
+
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () { show(b.dataset.lang); });
+    });
+
+    // Only hide a language once the switch is usable.
+    document.getElementById("langs").classList.add("ready");
+    show((navigator.language || "en").toLowerCase().indexOf("zh") === 0 ? "zh" : "en");
+  })();
+</script>
+</body>
+</html>
